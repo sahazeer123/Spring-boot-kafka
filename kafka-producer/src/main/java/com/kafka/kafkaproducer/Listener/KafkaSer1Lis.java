@@ -1,5 +1,8 @@
 package com.kafka.kafkaproducer.Listener;
 
+import com.kafka.kafkaproducer.Model.Event;
+import com.kafka.kafkaproducer.Repository.MessageRepo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -11,7 +14,10 @@ import org.springframework.stereotype.Service;
 public class KafkaSer1Lis {
 
     @Autowired
-    KafkaTemplate<String,String>kafkaTemplate;
+    private MessageRepo messageRepo;
+    
+    @Autowired
+    private KafkaTemplate<String,String>kafkaTemplate;
 
     private Boolean toStop = false;
 
@@ -30,7 +36,8 @@ public class KafkaSer1Lis {
 
     @KafkaListener(topics = "Kafka_Example2", groupId = "group_id")
     public void consume(String message) {
-        System.out.println("Consumed message : " + message);
+        Event top = new Event(message);
+        this.messageRepo.save(top);
         if(!toStop)
            sendMsg();
         else
