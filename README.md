@@ -18,11 +18,13 @@ Run microservice kafka-producer and kafka-consumer using gradle
   *'kafka-producer' runs on port number 8080
   *'kafka-consumer' runs on prot number 8081
 
-To start the ping pong,send api request to kafka-producer
-  ### localhost:8080/kafka/start
+### To start the ping pong,send api request to kafka-producer
+  ##### localhost:8080/kafka/start
 
-To stop the ping pong
-  ### localhost:8080/kafka/stop
+### To stop the ping pong
+  ##### localhost:8080/kafka/stop
 
 All message for kafka-producer will be stored in table Db1
+
+
 All message for kafka-consumer will be stored in table Db2
