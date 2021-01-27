@@ -2,9 +2,9 @@
 Two spring boot microservices that pulishes and recieves messages using kafka as a messaging serivce and store messsage using postresDB
 
 ## Technologies
-Spring-boot
-Kafka
-Postgres Database
+ * Spring-boot
+ * Kafka
+ * Postgres Database
 
 ## Setup
 To run this project, install postgres locally 
