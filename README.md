@@ -1,12 +1,12 @@
 # Spring-boot-kafka
 Two spring boot microservices that pulishes and recieves messages using kafka as a messaging serivce and store messsage using postresDB
 
-##Technologies
+## Technologies
 Spring-boot
 Kafka
 Postgres Database
 
-##Setup
+## Setup
 To run this project, install postgres locally 
 create database name eventdb
 Run postrges in port number 5432(default port)
@@ -19,10 +19,10 @@ Run microservice kafka-producer and kafka-consumer using gradle
   *'kafka-consumer' runs on prot number 8081
 
 To start the ping pong,send api request to kafka-producer
-  ###localhost:8080/kafka/start
+  ### localhost:8080/kafka/start
 
 To stop the ping pong
-  ###localhost:8080/kafka/stop
+  ### localhost:8080/kafka/stop
 
 All message for kafka-producer will be stored in table Db1
 All message for kafka-consumer will be stored in table Db2
