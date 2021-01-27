@@ -15,8 +15,8 @@ Zookeeper and kafka should be running on their default port before running sprin
 
 Run microservice kafka-producer and kafka-consumer using gradle
 ./gradlew bootRun
-  *'kafka-producer' runs on port number 8080
-  *'kafka-consumer' runs on prot number 8081
+  * 'kafka-producer' runs on port number 8080
+  * 'kafka-consumer' runs on prot number 8081
 
 ### To start the ping pong,send api request to kafka-producer
   ##### localhost:8080/kafka/start
